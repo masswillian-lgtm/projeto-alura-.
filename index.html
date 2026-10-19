@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Evento Escolar</title>
+    <!-- Vinculando o arquivo CSS que está na pasta css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Organizador de Evento Escolar</h2>
+        <p class="subtitle">Capacidade máxima: 100 pessoas | Limite de convidados: 20</p>
+
+        <form id="eventoForm">
+            <div class="input-group">
+                <label for="alunos">Quantidade de Alunos:</label>
+                <input type="number" id="alunos" min="0" value="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="monitores">Quantidade de Monitores:</label>
+                <input type="number" id="monitores" min="0" value="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="convidados">Quantidade de Convidados:</label>
+                <input type="number" id="convidados" min="0" value="0" required>
+            </div>
+
+            <button type="button" onclick="validarEvento()">Verificar Disponibilidade</button>
+        </form>
+
+        <!-- Área onde a mensagem de sucesso ou erro vai aparecer -->
+        <div id="resultado" class="resultado hidden"></div>
+    </div>
+
+    <!-- Vinculando o arquivo JS que está na pasta js -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
